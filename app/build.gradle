@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    //关闭检索功能
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml")
+    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.zhang.androidbase"
@@ -10,6 +17,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
