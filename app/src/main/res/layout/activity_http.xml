@@ -13,5 +13,15 @@
         android:layout_height="wrap_content"
         android:text="访问百度网页源码"
         android:onClick="reqHttpWeb"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="访问网络图片并显示在ImageView(不用任何图片框架)"
+        android:onClick="reqHttpWebPicShow"/>
+
+    <ImageView
+        android:id="@+id/iv_net_pic_show_without_glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
