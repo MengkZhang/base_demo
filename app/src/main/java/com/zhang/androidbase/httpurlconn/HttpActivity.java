@@ -27,12 +27,14 @@ import java.net.URLConnection;
 public class HttpActivity extends AppCompatActivity {
 
     ImageView mImageView;
+    MySmartImageView mMySmartImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http);
         mImageView = findViewById(R.id.iv_net_pic_show_without_glide);
+        mMySmartImageView = findViewById(R.id.my_imageview);
     }
 
     @SuppressLint("HandlerLeak")
@@ -170,5 +172,10 @@ public class HttpActivity extends AppCompatActivity {
                 }
             }
         }).start();
+    }
+
+    public void myImageView(View view) {
+        String path = "https://upload-images.jianshu.io/upload_images/5914881-8e0f627c5963bd0d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp";
+        mMySmartImageView.setImageUrl(path,R.mipmap.ic_launcher);
     }
 }
